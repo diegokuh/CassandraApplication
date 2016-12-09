@@ -4,29 +4,26 @@ import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
 
 @Table
-public class Emp extends GenericModel{
+public class Document extends GenericModel {
 	@PrimaryKey
 	private Integer id;
-	private String name;
-	
+	private String docName;
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getDocName() {
+		return docName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setDocName(String docName) {
+		this.docName = docName;
 	}
 	@Override
 	public String toString() {
-		return "Emp [id=" + id + ", name=" + name + "]";
+		return "Document [id=" + id + ", docName=" + docName + "]";
 	}
-	
-	
 	
 	
 }
